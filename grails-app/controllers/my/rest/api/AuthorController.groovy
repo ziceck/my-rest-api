@@ -51,7 +51,7 @@ class AuthorController {
         respond author, [status: OK, view:"show"]
     }
 
-    def delete(Long id) {
+    def delete(Long  id) {
         if (id == null) {
             render status: NOT_FOUND
             return
