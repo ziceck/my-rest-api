@@ -1,0 +1,11 @@
+import my.rest.api.Book
+
+model {
+	Book book
+}
+
+json {
+	id book.id
+	title book.title
+	year book.year
+}

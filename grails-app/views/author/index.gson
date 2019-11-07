@@ -1,0 +1,8 @@
+import my.rest.api.Author
+
+model {
+	Iterable<Author> authorList
+}
+
+json tmpl.author(authorList ?: [])
+

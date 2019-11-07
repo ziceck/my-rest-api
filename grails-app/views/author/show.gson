@@ -1,0 +1,7 @@
+import my.rest.api.Author
+
+model {
+	Author author
+}
+
+json tmpl.author(author)

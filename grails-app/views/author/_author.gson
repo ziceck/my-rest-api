@@ -1,0 +1,7 @@
+import my.rest.api.Author
+
+model {
+	Author author
+}
+
+json g.render(author, [resolveTemplate: false])

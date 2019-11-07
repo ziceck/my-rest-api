@@ -1,0 +1,5 @@
+response.status 200
+
+json {
+    message "API Books 1.0 2019"
+}

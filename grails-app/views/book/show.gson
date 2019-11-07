@@ -1,0 +1,7 @@
+import my.rest.api.Book
+
+model {
+	Book book
+}
+
+json tmpl.book(book)
