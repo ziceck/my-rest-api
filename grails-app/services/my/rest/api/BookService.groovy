@@ -1,31 +1,17 @@
 package my.rest.api
 
-class BookService {
+import grails.gorm.services.Service
 
-	def show(long idBook) {
-		return Book.get(idBook)
-	}
+@Service(Book)
+interface BookService {
 
-	def save(Map params) {
-		def book = new Book(params)
-		book.save(flush: true, failOnError: true)
-		return book
-	}
+	Book get(Serializable id)
 
-	def update(Map params, long idBook) {
-		def book = Book.get(idBook)
-		book.title = params.book
-		book.year = params.year as Integer
-		return book.refresh()
-	}
+	List<Book> list(Map args)
 
-	def index() {
-		return Book.list()
-	}
+	Long count()
 
-	def delete(long idBook) {
-		def book = Book.get(idBook)
-		book.delete(flush: true, failOnError: true)
-		return book
-	}
+	void delete(Serializable id)
+
+	Book save(Book book)
 }
