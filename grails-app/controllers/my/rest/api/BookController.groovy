@@ -1,6 +1,7 @@
 package my.rest.api
 
 import static org.springframework.http.HttpStatus.CREATED
+import static org.springframework.http.HttpStatus.NO_CONTENT
 import static org.springframework.http.HttpStatus.OK
 
 class BookController {
@@ -24,8 +25,7 @@ class BookController {
 	}
 
 	def delete(Long id) {
-		Book book = bookService.get(1)
 		bookService.delete(id)
-		respond book, [status: OK, view: "show"]
+		render status: NO_CONTENT
 	}
 }

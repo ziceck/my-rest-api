@@ -2,10 +2,14 @@ package my.rest.api
 
 class Author {
 
-    String name
+    String firstName
+    String lastName
 
     static constraints = {
     }
 
-    static hasMany = [books: Book]
+    static mapping = {
+    }
+
+    static hasMany = [authorBook: AuthorBook]
 }

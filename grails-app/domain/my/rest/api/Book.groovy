@@ -8,5 +8,8 @@ class Book {
     static constraints = {
     }
 
-    static belongsTo = [author: Author]
+    static mapping = {
+    }
+
+    static hasMany = [authorBook: AuthorBook]
 }
