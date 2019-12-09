@@ -13,7 +13,9 @@ class BookController {
 	}
 
 	def save(Book book) {
-		respond bookService.save(book), [status: CREATED, view:"show"]
+		if (book.hasErrors())
+			respond book.errors, view:'create'
+		else respond bookService.save(book), [status: CREATED, view:"show"]
 	}
 
 	def update(Book book) {

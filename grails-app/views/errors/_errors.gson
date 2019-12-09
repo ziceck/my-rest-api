@@ -1,5 +1,4 @@
 import org.springframework.validation.*
-
 /**
  * Renders validation errors according to vnd.error: https://github.com/blongden/vnd.error
  */

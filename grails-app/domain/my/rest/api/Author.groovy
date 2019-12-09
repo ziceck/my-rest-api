@@ -4,6 +4,10 @@ class Author {
 
     String firstName
     String lastName
+    List<Integer> booksIds
+
+
+    static transients = ['booksIds']
 
     static constraints = {
     }
@@ -12,4 +16,9 @@ class Author {
     }
 
     static hasMany = [authorBook: AuthorBook]
+
+    @Override
+    String toString() {
+        return firstName + lastName + booksIds.size()
+    }
 }

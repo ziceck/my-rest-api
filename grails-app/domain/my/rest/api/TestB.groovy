@@ -1,7 +1,9 @@
 package my.rest.api
 
-class TestB {
+class TestB extends TestA {
 
+    int c
+    String d
     static constraints = {
     }
 }

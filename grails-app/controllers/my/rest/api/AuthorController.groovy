@@ -16,7 +16,9 @@ class AuthorController {
         respond authorService.get(id)
     }
 
-    def save(Author author) {
+    def save() {
+        def author = new Author(request.JSON as Map)
+        println request.JSON
         if (author == null) {
             render status: NOT_FOUND
         } else {
