@@ -4,21 +4,17 @@ class Author {
 
     String firstName
     String lastName
-    List<Integer> booksIds
-
-
-    static transients = ['booksIds']
-
     static constraints = {
     }
 
     static mapping = {
+        books joinTable: [name: "author_book", key: 'author_id']
     }
 
-    static hasMany = [authorBook: AuthorBook]
+    static hasMany = [books: Book]
 
     @Override
     String toString() {
-        return firstName + lastName + booksIds.size()
+        return firstName + lastName
     }
 }
