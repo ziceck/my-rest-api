@@ -16,5 +16,6 @@ class UrlMappings {
         "401"(view: '/notAuthorized')
         "403"(view: '/forbidden')
         "/api"(view: '/api')
+        "/login/auth"(view: '/notAuthorized')
     }
 }
