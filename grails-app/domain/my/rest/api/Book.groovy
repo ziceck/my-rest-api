@@ -13,4 +13,13 @@ class Book {
     }
 
     static hasMany = [authors: Author]
+
+
+    @Override
+    String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", year=" + year +
+                '}'
+    }
 }

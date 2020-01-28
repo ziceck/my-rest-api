@@ -17,5 +17,6 @@ class UrlMappings {
         "403"(view: '/forbidden')
         "/api"(view: '/api')
         "/login/auth"(view: '/notAuthorized')
+        "/api/oauth/access_token"(controller: 'restOauth', action: 'accessToken')
     }
 }

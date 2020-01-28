@@ -23,6 +23,7 @@ class BookController {
 	}
 
 	def index() {
+		println new Date().time
 		respond bookService.list(params), model: [bookCount: bookService.count()]
 	}
 
