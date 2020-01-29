@@ -6,6 +6,14 @@ import static org.springframework.http.HttpStatus.OK
 
 class BookController {
 
+	static allowedMethods = [
+			index: 'GET',
+			show: 'GET',
+			save: 'POST',
+			update: 'PUT',
+			delete: 'DELETE'
+	]
+
 	BookService bookService
 
 	def show(Long id) {
