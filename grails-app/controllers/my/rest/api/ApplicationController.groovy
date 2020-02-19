@@ -1,7 +1,8 @@
 package my.rest.api
 
 import grails.core.GrailsApplication
-import grails.plugins.*
+import grails.plugins.GrailsPluginManager
+import grails.plugins.PluginManagerAware
 
 class ApplicationController implements PluginManagerAware {
 
@@ -10,8 +11,8 @@ class ApplicationController implements PluginManagerAware {
 
   def index() {
     [
-      grailsApplication: grailsApplication, 
-      pluginManager: pluginManager
+        grailsApplication: grailsApplication,
+        pluginManager    : pluginManager
     ]
   }
 }
